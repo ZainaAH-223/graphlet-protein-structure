@@ -32,3 +32,6 @@ reports/*_files/
 __pycache__/
 .DS_Store
 Thumbs.db
+
+# Compiled external tools (rebuilt by `pixi run setup-orca`)
+tools/

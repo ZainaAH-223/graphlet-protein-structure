@@ -1,3 +1,4 @@
 file	source	url	version	license
 data/raw/1MBN.pdb	RCSB PDB	https://files.rcsb.org/download/1MBN.pdb	-	CC0
 data/raw/2HHB.pdb	RCSB PDB	https://files.rcsb.org/download/2HHB.pdb	-	CC0
+tools/orca/orca.cpp	ORCA (Hocevar & Demsar 2014)	https://github.com/thocevar/orca/tree/e146a8b1a99a90f5e3096b7bcc2ab0ea246c3ca7	e146a8b	GPL-3.0

@@ -29,6 +29,7 @@ check = { cmd = "python --version && quarto --version", description = "Check tha
 # The lessons replace this placeholder with real steps.
 reproduce = { cmd = "python -c \"print('Nothing to reproduce yet: add your steps to the reproduce task in pixi.toml')\"", description = "Rebuild all results from raw data" }
 download = { cmd = "python scripts/download.py", description = "Download raw data listed in metadata/sources.tsv" }
+setup-orca = { cmd = "python scripts/setup_orca.py", description = "Download, compile and self-test ORCA (pinned commit)" }
 
 [pypi-dependencies]
 tmtools = ">=0.3.0, <0.4"
