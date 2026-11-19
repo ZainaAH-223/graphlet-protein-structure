@@ -4,6 +4,25 @@ Alignment-free protein structure comparison using graphlets of residue contact n
 
 Author: Zaina Alhemeiri ([ORCID 0009-0004-8008-1935](https://orcid.org/0009-0004-8008-1935))
 
+## Question
+
+Can graphlet features of residue-contact networks recognise protein structural
+similarity without explicit structural alignment?
+
+**Approach.** For a small, balanced set of experimentally determined protein
+domains from several CATH classes, we build residue-contact networks and compare
+proteins using three feature types: simple network statistics, graphlet features,
+and order-aware (sequence-order) graphlet features. We test how well each recovers
+CATH structural similarity, how sensitive this is to the contact cutoff and to
+protein length, and how it compares with a structural aligner (TM-align) on a
+subset. This follows the published approach of GRAFENE (Faisal et al. 2017) and
+related work, on a smaller controlled dataset.
+
+**Extension.** We ask how intrinsic disorder shows up in the contact-network
+topology of AlphaFold models: do disordered regions (low pLDDT and/or
+DisProt-annotated) have a distinct local wiring pattern beyond simply having
+fewer contacts, and where do conditionally folded regions sit? This part is new.
+
 ## Reproduce the results
 
 You need [Pixi](https://pixi.prefix.dev/latest/) and an internet connection.
