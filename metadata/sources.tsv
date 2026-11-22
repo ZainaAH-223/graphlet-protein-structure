@@ -1,3 +1,6 @@
 file	source	url	version	license
 data/raw/1MBN.pdb	RCSB PDB	https://files.rcsb.org/download/1MBN.pdb	-	CC0
 data/raw/2HHB.pdb	RCSB PDB	https://files.rcsb.org/download/2HHB.pdb	-	CC0
+data/raw/cath/cath-dataset-nonredundant-S40-v4_4_0.list	CATH	https://download.cathdb.info/cath/releases/all-releases/v4_4_0/non-redundant-data-sets/cath-dataset-nonredundant-S40-v4_4_0.list	v4.4.0	CC BY 4.0
+data/raw/cath/cath-domain-list-v4_4_0.txt	CATH	https://download.cathdb.info/cath/releases/all-releases/v4_4_0/cath-classification-data/cath-domain-list-v4_4_0.txt	v4.4.0	CC BY 4.0
+data/raw/cath/cath-names-v4_4_0.txt	CATH	https://download.cathdb.info/cath/releases/all-releases/v4_4_0/cath-classification-data/cath-names-v4_4_0.txt	v4.4.0	CC BY 4.0
