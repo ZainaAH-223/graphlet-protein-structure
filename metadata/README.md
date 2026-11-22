@@ -2,11 +2,25 @@
 
 Small text files that describe the data. Committed to Git.
 
-- `sources.tsv`: where each raw file comes from (URL, database version, license).
-- `domains.tsv`: the CATH domain set (Phase 1), one row per domain.
-- `idp_proteins.tsv`: proteins for the disorder extension (Phase 5), one row per protein.
-- `checksums.sha256`: written by the download scripts; check with
-  `shasum -a 256 -c metadata/checksums.sha256`.
+| File | What it is |
+|---|---|
+| `sources.tsv` | Every raw file: where it comes from, version, license. Read by `scripts/download.py`. |
+| `checksums.sha256` | sha256 of each raw file. Written by `scripts/download.py` on the first download, checked on every later run. Verify by hand with `shasum -a 256 -c metadata/checksums.sha256`. |
+
+Planned (added when created): `domains.tsv` (CATH domain set), `idp_proteins.tsv` (disorder extension).
 
 ## Data dictionary
-(Add a column table for each file when it is created.)
+
+### sources.tsv
+Tab-separated, one row per raw file.
+
+| Column | Meaning | Example |
+|---|---|---|
+| `file` | Path where the file is saved, relative to the project folder | `data/raw/1MBN.pdb` |
+| `source` | Database or provider | `RCSB PDB` |
+| `url` | Exact download URL | `https://files.rcsb.org/download/1MBN.pdb` |
+| `version` | Database release, or `-` if the entry is not versioned | `-` |
+| `license` | License of the data | `CC0` |
+
+### checksums.sha256
+Two columns separated by two spaces (standard `shasum` format): the sha256 hash, then the file path.
