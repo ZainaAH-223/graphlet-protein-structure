@@ -1,2 +1,5 @@
 e4635115be5a605e58f449f82824e15182a7000c3677876c33fc44118defef78  data/raw/1MBN.pdb
 d04b447c1177616e37d39e5af23b44d6aa85b5de74ed7ead84e1f0f5ff1fd40d  data/raw/2HHB.pdb
+a4b32ed9738a45aacd3a2c0db8d4987704b56730da49ff9460deb4c55d6e4989  data/raw/cath/cath-dataset-nonredundant-S40-v4_4_0.list
+2f87544bb8844ff37ad1d9348dfe0a23a7c9e4837e0d207733935148e088cc81  data/raw/cath/cath-domain-list-v4_4_0.txt
+9a7b68548a4b755ceda673cfcaba3f19733e1d571f6fafca34e54f62675cdd3a  data/raw/cath/cath-names-v4_4_0.txt

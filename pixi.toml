@@ -31,6 +31,7 @@ reproduce = { depends-on = ["test-pipeline"], description = "Rebuild all results
 download = { cmd = "python scripts/download.py", description = "Download raw data listed in metadata/sources.tsv" }
 setup-orca = { cmd = "python scripts/setup_orca.py", description = "Download, compile and self-test ORCA (pinned commit)" }
 test-pipeline = { cmd = "python scripts/test_pipeline.py", depends-on = ["download", "setup-orca"] }
+select-dataset = { cmd = "python scripts/select_dataset.py", depends-on = ["download"] }
 
 [pypi-dependencies]
 tmtools = ">=0.3.0, <0.4"

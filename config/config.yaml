@@ -13,3 +13,16 @@ pipeline_test:
   test_pdb: data/raw/1MBN.pdb          # sperm whale myoglobin
   compare_pdb: data/raw/2HHB.pdb       # human haemoglobin
   compare_chain: A                     # alpha chain, same globin fold
+
+dataset:
+  cath_version: v4.4.0
+  s40_list: data/raw/cath/cath-dataset-nonredundant-S40-v4_4_0.list   # CATH-40 non-redundant set (Sillitoe et al. 2015)
+  domain_list: data/raw/cath/cath-domain-list-v4_4_0.txt
+  names: data/raw/cath/cath-names-v4_4_0.txt
+  classes: [1, 2, 3, 4]       # all classes; the category rule decides which stay
+  min_length: 100             # >=100 residues: Newaz et al. 2020; GRAFENE software default
+  max_resolution: 2.5         # quality filter, PISCES-style (Wang & Dunbrack 2003)
+  min_per_category: 30        # >=30 networks per category, >=2 categories per level (Faisal et al. 2017)
+  folds_per_class: auto       # auto = largest number of qualifying folds every class can supply (balanced)
+  per_fold: 30                # domains per fold = GRAFENE minimum category size (Faisal et al. 2017)
+  candidates_per_fold: 45     # ranked spares, so failed structure checks can be replaced
