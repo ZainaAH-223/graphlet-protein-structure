@@ -9,7 +9,7 @@ graphlets:
   orca: tools/orca/orca
   size: 4                              # 4-node graphlets -> 15 node orbits
 
-phase0:
+pipeline_test:
   test_pdb: data/raw/1MBN.pdb          # sperm whale myoglobin
   compare_pdb: data/raw/2HHB.pdb       # human haemoglobin
   compare_chain: A                     # alpha chain, same globin fold

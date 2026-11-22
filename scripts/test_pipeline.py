@@ -1,7 +1,7 @@
-"""Phase 0: test the whole pipeline on one protein.
+"""Pipeline test: run the whole pipeline on one known protein.
 
 1MBN -> Cα contact network -> plot -> ORCA orbit counts -> TM-align vs 2HHB chain A.
-Run from the project folder:  pixi run phase0
+Run from the project folder:  pixi run test-pipeline
 """
 import subprocess
 from pathlib import Path
@@ -18,8 +18,8 @@ from tmtools import tm_align
 
 cfg = yaml.safe_load(open("config/config.yaml"))
 cutoff = cfg["network"]["cutoff"]
-p0 = cfg["phase0"]
-OUT = Path("results/phase0")
+p0 = cfg["pipeline_test"]
+OUT = Path("results/pipeline_test")
 OUT.mkdir(parents=True, exist_ok=True)
 
 
@@ -90,4 +90,4 @@ coords2, seq2 = ca_coords(p0["compare_pdb"], p0["compare_chain"])
 res = tm_align(coords, coords2, seq, seq2)
 print(f"TM-align 1MBN vs 2HHB:A  TM-score={res.tm_norm_chain1:.3f}  RMSD={res.rmsd:.2f} Å")
 assert res.tm_norm_chain1 > 0.5, "myoglobin and haemoglobin should share a fold"
-print("Phase 0 test passed.")
+print("Pipeline test passed.")
